@@ -229,7 +229,7 @@ class Nav_Walker extends \Walker_Nav_Menu {
 		if ( $this->has_children && 0 === $depth ) {
 			$atts['href']          = ! empty( $item->url ) ? $item->url : '';
 			$atts['aria-haspopup'] = 'true';
-			$atts['class']         = 'dropdown dropdown-item nav-link';
+			$atts['class']         = 'dropdown dropdown-item nav-link font-medium hover:text-secondary dark:hover:text-secondary-light transition-colors';
 			$atts['id']            = 'menu-item-dropdown-' . $item->ID;
 		} else {
 			if ( true === $this->has_schema ) {
@@ -239,9 +239,9 @@ class Nav_Walker extends \Walker_Nav_Menu {
 			$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
 			// For items in dropdowns use .dropdown-item instead of .nav-link.
 			if ( $depth > 0 ) {
-				$atts['class'] = 'dropdown-item';
+				$atts['class'] = 'dropdown-item block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800';
 			} else {
-				$atts['class'] = 'nav-link';
+				$atts['class'] = 'nav-link text-sm font-medium hover:text-secondary dark:hover:text-secondary-light transition-colors';
 			}
 		}
 

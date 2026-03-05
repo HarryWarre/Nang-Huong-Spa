@@ -76,31 +76,17 @@ namespace Air_Light;
     <header class="fixed w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-          <nav class="hidden md:flex space-x-8">
             <?php
-            // ACF: Header Navigation Links (Repeater via get_option)
-            $header_menu_links_count = get_option( 'copacf_options_header_menu_links' );
-            if ( $header_menu_links_count && is_numeric( $header_menu_links_count ) && $header_menu_links_count > 0 ) :
-              for ( $i = 0; $i < $header_menu_links_count; $i++ ) {
-                $link_text = get_option( 'copacf_options_header_menu_links_' . $i . '_link_text' );
-                $link_url = get_option( 'copacf_options_header_menu_links_' . $i . '_link_url' );
-                if ( $link_text && $link_url ) {
-                  ?>
-                  <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary-light transition-colors" href="<?php echo esc_url( $link_url ); ?>"><?php echo esc_html( $link_text ); ?></a>
-                  <?php
-                }
-              }
-            else :
-              // Fallback static links
-              ?>
-              <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary-light transition-colors" href="#">Trang chủ</a>
-              <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary-light transition-colors" href="#about">Về chúng tôi</a>
-              <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary-light transition-colors" href="#services">Dịch vụ</a>
-              <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary-light transition-colors" href="#reviews">Khách hàng</a>
-              <?php
-            endif;
+            wp_nav_menu( [
+              'theme_location' => 'primary',
+              'container'      => false,
+              'menu_class'     => 'hidden md:flex space-x-8',
+              'fallback_cb'    => false,
+              'items_wrap'     => '<div id="%1$s" class="%2$s">%3$s</div>',
+              'walker'         => new \Air_Light\Nav_Walker(),
+            ] );
             ?>
-          </nav>
+
           <div class="flex-shrink-0 flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 w-48 max-w-[50vw]">
             <?php
             // ACF: Header Logo (Image ID) or Site Name Text via get_option
@@ -138,27 +124,16 @@ namespace Air_Light;
       <div id="nav" class="hidden md:hidden bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 shadow-lg">
         <div class="px-4 pt-2 pb-6 space-y-2">
            <?php
-            $header_menu_links_count = get_option( 'copacf_options_header_menu_links' );
-            if ( $header_menu_links_count && is_numeric( $header_menu_links_count ) && $header_menu_links_count > 0 ) :
-              for ( $i = 0; $i < $header_menu_links_count; $i++ ) {
-                $link_text = get_option( 'copacf_options_header_menu_links_' . $i . '_link_text' );
-                $link_url = get_option( 'copacf_options_header_menu_links_' . $i . '_link_url' );
-                if ( $link_text && $link_url ) {
-                  ?>
-                  <a class="block px-3 py-2 rounded-md text-base font-medium dark:text-white hover:bg-primary/10 hover:text-primary transition-colors" href="<?php echo esc_url( $link_url ); ?>"><?php echo esc_html( $link_text ); ?></a>
-                  <?php
-                }
-              }
-            else :
-              // Fallback static links
-              ?>
-              <a class="block px-3 py-2 rounded-md text-base font-medium dark:text-white hover:bg-primary/10 hover:text-primary transition-colors" href="#">Trang chủ</a>
-              <a class="block px-3 py-2 rounded-md text-base font-medium dark:text-white hover:bg-primary/10 hover:text-primary transition-colors" href="#about">Về chúng tôi</a>
-              <a class="block px-3 py-2 rounded-md text-base font-medium dark:text-white hover:bg-primary/10 hover:text-primary transition-colors" href="#services">Dịch vụ</a>
-              <a class="block px-3 py-2 rounded-md text-base font-medium dark:text-white hover:bg-primary/10 hover:text-primary transition-colors" href="#reviews">Khách hàng</a>
-              <?php
-            endif;
+            wp_nav_menu( [
+              'theme_location' => 'primary',
+              'container'      => false,
+              'menu_class'     => 'space-y-2',
+              'fallback_cb'    => false,
+              'items_wrap'     => '<div id="%1$s-mobile" class="%2$s">%3$s</div>',
+              'walker'         => new \Air_Light\Nav_Walker(),
+            ] );
             ?>
+
           <a class="block px-3 py-3 mt-4 text-center border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-opacity-90" href="<?php echo esc_url( $header_btn_link ); ?>"><?php echo esc_html( $header_btn_text ); ?></a>
         </div>
       </div>

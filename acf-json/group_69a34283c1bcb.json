@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Chào mừng đến với",
+            "default_value": "Khơi nguồn vẻ đẹp tự nhiên",
             "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "",
@@ -37,7 +37,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Nàng Hương",
+            "default_value": "Đánh thức",
             "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "",
@@ -58,7 +58,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Beauty & Spa",
+            "default_value": "vẻ đẹp thanh xuân",
             "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "",
@@ -79,7 +79,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Đánh thức vẻ đẹp tự nhiên và nuôi dưỡng tâm hồn bạn trong không gian thư thái tuyệt đối. Nơi bình yên để bạn trở về.",
+            "default_value": "Tận hưởng những khoảnh khắc thư giãn tuyệt đối với các liệu trình spa massage chuyên nghiệp, giúp cân bằng cơ thể và tâm trí.",
             "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "",
@@ -126,7 +126,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Khám phá ngay",
+            "default_value": "Khám phá vòng quanh",
             "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "",
