@@ -1,0 +1,54 @@
+# Theme Development Guide: Air-light
+
+Based on the [Air-light documentation](https://github.com/digitoimistodude/air-light) and the theme structure, here is where you should place your code.
+
+## 1. Where to place Styles (CSS/SASS)
+
+Air-light uses a modern approach combining [theme.json](file:///c:/wamp64/www/spa/wp-content/themes/air-light/theme.json) for global settings and SASS for detailed styling.
+
+### 🎨 Global Colors, Typography, and Spacing
+Place these in [theme.json](file:///c:/wamp64/www/spa/wp-content/themes/air-light/theme.json).
+- **Why**: This file is the "source of truth" for the WordPress Block Editor and automatically generates CSS variables (e.g., `--wp--preset--color--black`).
+- **Example**: Update `settings.color.palette` to add new "Primary" or "Secondary" colors.
+
+### 📐 SCSS Variables (Non-color)
+Place technical variables (like breakpoints) in [assets/src/sass/variables/](file:///c:/wamp64/www/spa/wp-content/themes/air-light/assets/src/sass/variables/).
+
+### 🧩 Components & Layouts
+- **General Layout**: [assets/src/sass/layout/](file:///c:/wamp64/www/spa/wp-content/themes/air-light/assets/src/sass/layout/) (Header, Footer, Typography).
+- **Reusable UI Components**: [assets/src/sass/components/](file:///c:/wamp64/www/spa/wp-content/themes/air-light/assets/src/sass/components/) (Buttons, Cards, etc.).
+- **Page-specific Styles**: [assets/src/sass/views/](file:///c:/wamp64/www/spa/wp-content/themes/air-light/assets/src/sass/views/) (e.g., `front-page.scss`).
+
+> [!TIP]
+> After adding a new SCSS file, remember to `@use` it in [front-end.scss](file:///c:/wamp64/www/spa/wp-content/themes/air-light/assets/src/sass/front-end.scss).
+
+---
+
+## 2. Where to place HTML and PHP
+
+### 📄 Main Page Templates
+These are located in the **root directory** of the theme.
+- [front-page.php](file:///c:/wamp64/www/spa/wp-content/themes/air-light/front-page.php): For the site's homepage.
+- [page.php](file:///c:/wamp64/www/spa/wp-content/themes/air-light/page.php): For default static pages.
+- [single.php](file:///c:/wamp64/www/spa/wp-content/themes/air-light/single.php): For single blog posts.
+
+### 🧱 Modular HTML Fragments
+Place reusable parts of your HTML in the [template-parts/](file:///c:/wamp64/www/spa/wp-content/themes/air-light/template-parts/) folder.
+- **Example**: Create `template-parts/blocks/my-custom-hero.php` and include it using `get_template_part( 'template-parts/blocks/my-custom-hero' )`.
+
+### ⚙️ Theme Logic, Actions, and Filters
+Place functional PHP code in the [inc/](file:///c:/wamp64/www/spa/wp-content/themes/air-light/inc/) folder.
+- [inc/hooks.php](file:///c:/wamp64/www/spa/wp-content/themes/air-light/inc/hooks.php): For general WordPress hooks.
+- [inc/template-tags.php](file:///c:/wamp64/www/spa/wp-content/themes/air-light/inc/template-tags.php): For custom helper functions used in templates.
+
+---
+
+## Summary Table
+
+| What to code | File / Directory |
+| :--- | :--- |
+| Primary Colors / Font Names | [theme.json](file:///c:/wamp64/www/spa/wp-content/themes/air-light/theme.json) |
+| Navigation / Header Styles | `assets/src/sass/navigation/` or `layout/` |
+| Custom Hero Section HTML | `template-parts/blocks/` |
+| Custom Hero Section CSS | `assets/src/sass/components/` |
+| Homepage PHP logic | [front-page.php](file:///c:/wamp64/www/spa/wp-content/themes/air-light/front-page.php) |

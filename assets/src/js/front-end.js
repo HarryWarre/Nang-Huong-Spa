@@ -19,6 +19,7 @@ import {
   navDesktop,
   navMobile,
 } from './modules/navigation';
+import initScrollReveal from './modules/scroll-reveal';
 // Define Javascript is active by changing the body class
 document.body.classList.remove('no-js');
 document.body.classList.add('js');
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initExternalLinkLabels();
   initA11ySkipLink();
   initA11yFocusSearchField();
+  initScrollReveal();
 
   // Init navigation
   // If you want to enable click based navigation, comment navDesktop() and uncomment navClick()

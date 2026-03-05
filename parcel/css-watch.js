@@ -31,6 +31,7 @@ const parcel = spawn(
       PARCEL_CONFIG: '.parcelrc.watch',
     },
     stdio: ['inherit', 'pipe', 'pipe'],
+    shell: true,
   }
 );
 

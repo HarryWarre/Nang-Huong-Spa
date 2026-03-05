@@ -23,10 +23,10 @@ browserSync.init({
     },
     '**/*.php'
   ],
-  https: {
+  https: config.ssl ? {
     key: config.ssl.key,
     cert: config.ssl.cert,
-  },
+  } : false,
   logLevel: 'debug',
   open: false,
   notify: true
