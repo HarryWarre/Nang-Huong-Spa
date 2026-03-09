@@ -1,6 +1,6 @@
 {
     "key": "group_69a34283c1bcb",
-    "title": "Trang chủ",
+    "title": "Cài đặt nội dung Trang chủ",
     "fields": [
         {
             "key": "field_69a34284af511",
@@ -168,7 +168,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "https:\/\/www.youtube.com\/watch?v=dQw4w9WgXcQ",
+            "default_value": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
             "maxlength": "",
             "allow_in_bindings": 0,
             "placeholder": "",
@@ -195,6 +195,668 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_stats_tab",
+            "label": "Thống kê",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_stats_list",
+            "label": "Danh sách Thống kê",
+            "name": "stats_list",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Thêm các thống kê hiển thị dưới Hero banner",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "sub_fields": [
+                {
+                    "key": "field_stat_icon",
+                    "label": "Icon (Material Design)",
+                    "name": "stat_icon",
+                    "type": "text"
+                },
+                {
+                    "key": "field_stat_number",
+                    "label": "Con số",
+                    "name": "stat_number",
+                    "type": "text"
+                },
+                {
+                    "key": "field_stat_text",
+                    "label": "Mô tả",
+                    "name": "stat_text",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_about_tab",
+            "label": "Về chúng tôi",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_about_image",
+            "label": "Ảnh đại diện (About)",
+            "name": "about_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_about_quote",
+            "label": "Trích dẫn trên ảnh",
+            "name": "about_quote",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_about_subtitle",
+            "label": "Tiêu đề phụ",
+            "name": "about_subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_about_title",
+            "label": "Tiêu đề chính",
+            "name": "about_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_about_title_highlight",
+            "label": "Tiêu đề in nghiêng",
+            "name": "about_title_highlight",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_about_description",
+            "label": "Mô tả",
+            "name": "about_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_about_founder_image",
+            "label": "Ảnh Founder",
+            "name": "about_founder_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_about_founder_name",
+            "label": "Tên Founder",
+            "name": "about_founder_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_about_founder_role",
+            "label": "Vai trò",
+            "name": "about_founder_role",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_services_tab",
+            "label": "Dịch Vụ",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_services_title",
+            "label": "Tiêu đề Dịch vụ",
+            "name": "services_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_services_title_highlight",
+            "label": "Tiêu đề Dịch vụ in nghiêng",
+            "name": "services_title_highlight",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_services_description",
+            "label": "Mô tả Dịch vụ",
+            "name": "services_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": ""
+        },
+        {
+            "key": "field_services_list",
+            "label": "Danh sách Dịch vụ",
+            "name": "services_list",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "sub_fields": [
+                {
+                    "key": "field_service_image",
+                    "label": "Ảnh Dịch vụ",
+                    "name": "service_image",
+                    "type": "image",
+                    "return_format": "id"
+                },
+                {
+                    "key": "field_service_name",
+                    "label": "Tên Dịch vụ",
+                    "name": "service_name",
+                    "type": "text"
+                },
+                {
+                    "key": "field_service_desc",
+                    "label": "Mô tả ngắn",
+                    "name": "service_desc",
+                    "type": "text"
+                },
+                {
+                    "key": "field_service_link",
+                    "label": "Link chi tiết",
+                    "name": "service_link",
+                    "type": "url"
+                }
+            ]
+        },
+        {
+            "key": "field_services_view_all_link",
+            "label": "Link Xem tất cả",
+            "name": "services_view_all_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_services_view_all_text",
+            "label": "Chữ Xem tất cả",
+            "name": "services_view_all_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_reviews_tab",
+            "label": "Khách hàng",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_reviews_title",
+            "label": "Tiêu đề Đánh giá",
+            "name": "reviews_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_reviews_title_highlight",
+            "label": "Tiêu đề Đánh giá nổi bật",
+            "name": "reviews_title_highlight",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_reviews_list",
+            "label": "Danh sách Đánh giá",
+            "name": "reviews_list",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "sub_fields": [
+                {
+                    "key": "field_review_stars",
+                    "label": "Số sao",
+                    "name": "review_stars",
+                    "type": "number",
+                    "min": 1,
+                    "max": 5
+                },
+                {
+                    "key": "field_review_text",
+                    "label": "Nội dung",
+                    "name": "review_text",
+                    "type": "textarea"
+                },
+                {
+                    "key": "field_reviewer_avatar",
+                    "label": "Avatar",
+                    "name": "reviewer_avatar",
+                    "type": "image",
+                    "return_format": "id"
+                },
+                {
+                    "key": "field_reviewer_name",
+                    "label": "Tên",
+                    "name": "reviewer_name",
+                    "type": "text"
+                },
+                {
+                    "key": "field_reviewer_role",
+                    "label": "Vai trò",
+                    "name": "reviewer_role",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_contact_tab",
+            "label": "Liên Hệ",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_contact_title",
+            "label": "Tiêu đề Liên hệ",
+            "name": "contact_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_title_highlight",
+            "label": "Tiêu đề Liên hệ nổi bật",
+            "name": "contact_title_highlight",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_address",
+            "label": "Địa chỉ",
+            "name": "contact_address",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_phone",
+            "label": "Điện thoại",
+            "name": "contact_phone",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_hours",
+            "label": "Giờ mở cửa",
+            "name": "contact_hours",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_contact_map",
+            "label": "Địa chỉ trên Google Maps (Tự động nhúng)",
+            "name": "contact_map",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Chỉ cần nhập địa chỉ, website sẽ tự động tạo bản đồ.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Ví dụ: 123 Đường ABC, Quận 1..."
         }
     ],
     "location": [
@@ -216,5 +878,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772385378
+    "modified": 1773069158
 }

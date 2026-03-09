@@ -422,10 +422,16 @@ get_header(); ?>
           <?php endif; ?>
         </div>
         
-        <?php if ( $contact_map ) : ?>
-        <div class="relative h-96 lg:h-auto bg-gray-200">
-          <?php echo $contact_map; // Iframe is intentionally not escaped because it contains HTML tags (iframe) ?>
-          <div class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-md flex items-center gap-2 text-xs font-bold text-gray-800 pointer-events-none">
+        <?php if ( $contact_map ) : 
+          $is_iframe = strpos( $contact_map, '<iframe' ) !== false;
+        ?>
+        <div class="relative h-96 lg:h-auto lg:min-h-[400px] bg-gray-200 overflow-hidden">
+          <?php if ( $is_iframe ) : ?>
+            <div class="absolute inset-0 w-full h-full [&>iframe]:w-full [&>iframe]:h-full border-0"><?php echo $contact_map; ?></div>
+          <?php else : ?>
+            <iframe class="absolute inset-0 w-full h-full border-0" src="https://maps.google.com/maps?q=<?php echo urlencode( wp_strip_all_tags( $contact_map ) ); ?>&hl=vi&z=15&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <?php endif; ?>
+          <div class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-md flex items-center gap-2 text-xs font-bold text-gray-800 pointer-events-none z-10">
             <span class="material-icons text-sm text-primary">directions</span> Chỉ đường
           </div>
         </div>

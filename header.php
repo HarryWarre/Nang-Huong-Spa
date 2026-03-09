@@ -80,24 +80,24 @@ namespace Air_Light;
             wp_nav_menu( [
               'theme_location' => 'primary',
               'container'      => false,
-              'menu_class'     => 'hidden md:flex space-x-8',
+              'menu_class'     => 'hidden md:flex space-x-8 list-none m-0 p-0 items-center justify-center',
               'fallback_cb'    => false,
-              'items_wrap'     => '<div id="%1$s" class="%2$s">%3$s</div>',
+              'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
               'walker'         => new \Air_Light\Nav_Walker(),
             ] );
             ?>
 
-          <div class="flex-shrink-0 flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 w-48 max-w-[50vw]">
+          <div class="flex-shrink-0 flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 w-48 max-w-[50vw] h-full py-2">
             <?php
             // ACF: Header Logo (Image ID) or Site Name Text via get_option
             $header_logo = get_option( 'copacf_options_header_logo' );
             if ( $header_logo ) {
-              echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="flex items-center justify-center">';
-              echo wp_get_attachment_image( $header_logo, 'full', false, [ 'class' => 'h-12 w-auto max-w-full object-contain hover:opacity-80 transition-opacity' ] );
+              echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="flex items-center justify-center h-full">';
+              echo wp_get_attachment_image( $header_logo, 'full', false, [ 'class' => 'max-h-16 w-auto max-w-full object-contain hover:opacity-80 transition-opacity drop-shadow-sm mix-blend-multiply dark:mix-blend-normal' ] );
               echo '</a>';
             } else {
               ?>
-              <a class="font-display text-2xl font-bold text-primary hover:text-secondary transition-colors tracking-wider" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+              <a class="font-display text-2xl font-bold text-primary hover:text-secondary transition-colors tracking-wider flex items-center h-full" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
               <?php
             }
             ?>
@@ -127,9 +127,9 @@ namespace Air_Light;
             wp_nav_menu( [
               'theme_location' => 'primary',
               'container'      => false,
-              'menu_class'     => 'space-y-2',
+              'menu_class'     => 'space-y-4 list-none m-0 p-0 [&_a]:text-gray-800 dark:[&_a]:text-gray-200 [&_a]:font-medium',
               'fallback_cb'    => false,
-              'items_wrap'     => '<div id="%1$s-mobile" class="%2$s">%3$s</div>',
+              'items_wrap'     => '<ul id="%1$s-mobile" class="%2$s">%3$s</ul>',
               'walker'         => new \Air_Light\Nav_Walker(),
             ] );
             ?>
