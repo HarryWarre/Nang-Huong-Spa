@@ -127,7 +127,7 @@ namespace Air_Light;
             wp_nav_menu( [
               'theme_location' => 'primary',
               'container'      => false,
-              'menu_class'     => 'space-y-4 list-none m-0 p-0 [&_a]:text-gray-800 dark:[&_a]:text-gray-200 [&_a]:font-medium',
+              'menu_class'     => 'space-y-4 list-none m-0 p-0 [&_a]:text-gray-800 dark:[&_a]:text-gray-200 [&_a]:font-medium [&_.current-menu-item>a]:!text-primary [&_.current-menu-parent>a]:!text-primary',
               'fallback_cb'    => false,
               'items_wrap'     => '<ul id="%1$s-mobile" class="%2$s">%3$s</ul>',
               'walker'         => new \Air_Light\Nav_Walker(),

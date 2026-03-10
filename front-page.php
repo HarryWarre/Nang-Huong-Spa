@@ -78,8 +78,8 @@ get_header(); ?>
           <?php endif; ?>
         </div>
         <div class="lg:col-span-6 relative">
-          <div class="relative rounded-t-full rounded-b-[200px] overflow-hidden shadow-2xl mx-auto w-full max-w-md lg:max-w-full h-[300px] lg:h-[520px] border-8 border-white dark:border-gray-800">
-            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl"></div>
+          <div class="relative rounded-t-full rounded-b-[200px] overflow-hidden shadow-2xl mx-auto w-full max-w-md lg:max-w-full h-[300px] lg:h-[520px] border-8 border-white dark:border-gray-800" style="-webkit-mask-image: -webkit-radial-gradient(white, black);">
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl z-10 pointer-events-none"></div>
             <?php 
             if ( $hero_img ) {
               echo wp_get_attachment_image( $hero_img, 'full', false, [
@@ -92,7 +92,7 @@ get_header(); ?>
               <?php
             }
             ?>
-            <div class="absolute bottom-10 left-0 right-0 mx-auto w-max bg-white/90 dark:bg-gray-900/90 backdrop-blur px-6 py-3 rounded-full shadow-lg border border-gray-100 dark:border-gray-700">
+            <div class="absolute bottom-10 left-0 right-0 mx-auto w-max bg-white/90 dark:bg-gray-900/90 backdrop-blur px-6 py-3 rounded-full shadow-lg border border-gray-100 dark:border-gray-700 z-20">
               <p class="font-display italic text-primary text-lg"><?php echo esc_html( $hero_quote ); ?></p>
             </div>
           </div>
